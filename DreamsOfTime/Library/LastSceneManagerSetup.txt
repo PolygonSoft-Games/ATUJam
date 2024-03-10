@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PolygonSciFiCity/Scenes/UI START.unity
+- path: Assets/PolygonSciFiCity/Scenes/WINSCREEN.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
