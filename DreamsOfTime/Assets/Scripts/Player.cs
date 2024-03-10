@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
             cam = Camera.main.transform;
         }
     }
+
     private void Start()
     {
         controller = Controller.Instance;
@@ -35,15 +36,27 @@ public class Player : MonoBehaviour
     private void Update()
     {
         move = Inputs().sqrMagnitude > 0.1f;
-        if (move)
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
+            vel = 2.5f;
             animator.SetFloat("Speed", 3f);
         }
         else
         {
-            animator.SetFloat("Speed", 0f);
+            vel = 1f;
+
+            if (move)
+            {
+                animator.SetFloat("Speed", 1f);
+            }
+            else
+            {
+                animator.SetFloat("Speed", 0f);
+            }
         }
     }
+
     private void FixedUpdate()
     {
         if (move)
@@ -54,6 +67,7 @@ public class Player : MonoBehaviour
 
     float xInput;
     float yInput;
+
     private Vector3 Inputs()
     {
         xInput = Input.GetAxisRaw("Horizontal");
@@ -71,16 +85,12 @@ public class Player : MonoBehaviour
         switch (_state)
         {
             case PlayerState.idle:
-
                 break;
             case PlayerState.run:
-
                 break;
             case PlayerState.die:
-
                 break;
             case PlayerState.interaction:
-
                 break;
         }
     }
@@ -90,6 +100,7 @@ public class Player : MonoBehaviour
         _state = state;
         setAnimationState();
     }
+
     public PlayerState getState()
     {
         return _state;
@@ -97,4 +108,3 @@ public class Player : MonoBehaviour
 }
 
 public enum PlayerState { idle, run, die, interaction }
-
