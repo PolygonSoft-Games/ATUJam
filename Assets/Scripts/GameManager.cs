@@ -5,13 +5,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private int tourchCount;
+    [SerializeField] private int itemCount;
     [SerializeField] private int maxHealth;
 
     [Header("Scene Index")]
     [SerializeField] private int Index;
 
-    [HideInInspector] public int currentTourch;
+    [HideInInspector] public int currentItem;
     [HideInInspector] public int currentHealth;
 
     bool GameOver;
@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
 
     public void checkIWinned()
     {
-        currentTourch++;
-        if (tourchCount == currentTourch)
+        currentItem++;
+        if (itemCount == currentItem)
         {
             SceneManager.LoadScene(Index);
         }
