@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DreamsOfTime/Assets/PolygonSciFiCity/Materials/light_pink 1.mat.meta
+guid: a0a1798379a01ce4d9eb52d77d7b7220
+NativeFormatImporter:
+========
 guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
 DefaultImporter:
+>>>>>>>> 826e2f564dd8e9552fa2bcef399ebe91a90697a0:DreamsOfTime/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

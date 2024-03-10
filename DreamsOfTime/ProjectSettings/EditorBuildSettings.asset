@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/PolygonSciFiCity/Scenes/UI START.unity
-    guid: b6780cdbeea1e704c917eb42e37c9926
+  m_Scenes: []
   m_configObjects: {}
