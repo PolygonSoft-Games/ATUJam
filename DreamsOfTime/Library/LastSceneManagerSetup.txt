@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PolygonSciFiCity/Scenes/level design city.unity
+- path: Assets/PolygonSciFiCity/Scenes/GAMEOVERSCREEN.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
