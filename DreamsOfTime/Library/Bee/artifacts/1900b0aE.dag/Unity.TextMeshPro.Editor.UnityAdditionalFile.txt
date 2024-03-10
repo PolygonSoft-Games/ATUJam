@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
 C:\Users\USER\Documents\GitHub\ATUJam\DreamsOfTime
-=======
-C:\Users\Onur\Documents\GitHub\ATUJam\DreamsOfTime
->>>>>>> Stashed changes
