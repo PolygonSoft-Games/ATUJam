@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PolygonSciFiCity/Scenes/GAMEOVERSCREEN.unity
     guid: f9c7d3d5bbb79c34db9e169dd6e51571
+  - enabled: 1
+    path: Assets/PolygonSciFiCity/Scenes/WiINNERSCREEN.unity
+    guid: 378cd26195096c0409fc85876965dc44
   m_configObjects: {}
