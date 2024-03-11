@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Transform cam;
     private PlayerState _state;
 
-    public GameObject pauseMenu;
+    // public GameObject pauseMenu;
 
     bool move;
 
@@ -37,19 +37,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (pauseMenu.activeSelf)
-            {
-                pauseMenu.SetActive(false);
-                Time.timeScale = 1;
-            }
-            else
-            {
-                pauseMenu.SetActive(true);
-                Time.timeScale = 0;
-            }
-        }
+       // if (Input.GetKeyDown(KeyCode.Escape))
+       // {
+       //     if (pauseMenu.activeSelf)
+       //     {
+       //         pauseMenu.SetActive(false);
+       //         Time.timeScale = 1;
+       //     }
+       //     else
+       //     {
+       //         pauseMenu.SetActive(true);
+       //         Time.timeScale = 0;
+       //     }
+       // }
         move = Inputs().sqrMagnitude > 0.1f;
 
         if (Input.GetKey(KeyCode.LeftShift))

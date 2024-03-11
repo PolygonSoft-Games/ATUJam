@@ -22,23 +22,13 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void checkIWinned()
-    {
-        currentItem++;
-        if (itemCount == currentItem)
-        {
-            isDeath._isDeath = true;
-            SceneManager.LoadScene(Index);
-        }
-    }
-
     public void CheckILose()
     {
         currentHealth--;
         if (currentHealth <= 0)
         {
             isDeath._isDeath = false;
-            SceneManager.LoadScene(Index);
+            SceneManager.LoadScene(sceneBuildIndex: 3);
         }
     }
 
