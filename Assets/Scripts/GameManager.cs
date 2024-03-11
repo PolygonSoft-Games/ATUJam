@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         currentItem++;
         if (itemCount == currentItem)
         {
+            isDeath._isDeath = true;
             SceneManager.LoadScene(Index);
         }
     }
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         currentHealth--;
         if (currentHealth <= 0)
         {
+            isDeath._isDeath = false;
             SceneManager.LoadScene(Index);
         }
     }

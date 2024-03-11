@@ -1,8 +1,11 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
+    public bool isHit;
     Player player;
     enemyState state;
     Controller controller;
@@ -40,12 +43,17 @@ public class Enemy : MonoBehaviour
                 attack();
                 break;
             case enemyState.die:
-                this.enabled = false;
+                SceneManager.LoadScene(sceneBuildIndex: 0);
                 break;
         }
-        if (Input.GetKeyDown(KeyCode.P))
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Break();
+            state = enemyState.die;
+            isHit = true;
         }
     }
 
@@ -135,7 +143,7 @@ public class Enemy : MonoBehaviour
     private void Move()
     {
         dir.y = 0;
-        controller.MoveAndRotateDir(transform, controller.CalcAngle(dir), 5f, ref vel);
+        controller.MoveAndRotateDir(transform, controller.CalcAngle(dir), 2f, ref vel);
     }
 
 }

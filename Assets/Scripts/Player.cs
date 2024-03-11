@@ -39,12 +39,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            vel = 2.5f;
+            vel = 4f;
             animator.SetFloat("Speed", 3f);
         }
         else
         {
-            vel = 1f;
+            vel = 1.5f;
 
             if (move)
             {
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     {
         if (move)
         {
-            controller.MoveAndRotateDir(this.transform, controller.CalcAngle(Inputs()) + cam.eulerAngles.y, 5f, ref vel);
+            controller.MoveAndRotateDir(this.transform, controller.CalcAngle(Inputs()) + cam.eulerAngles.y, vel, ref vel);
         }
     }
 
