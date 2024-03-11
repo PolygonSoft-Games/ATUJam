@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
         {
             state = enemyState.die;
             isHit = true;
-            SceneManager.LoadScene("GAMEOVERSCREEN");
+            SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }
 

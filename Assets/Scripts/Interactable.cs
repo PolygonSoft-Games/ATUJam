@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class Interactable : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryInteract();
+            if (gameObject.CompareTag("LastItem"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 
