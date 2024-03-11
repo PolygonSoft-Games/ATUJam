@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BackToMainMenu : MonoBehaviour
 {
+    public GameObject optionsMenu;
+    public GameObject mainMenu;
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -12,7 +14,13 @@ public class BackToMainMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Options()
+    {
+        optionsMenu.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     public void Quit()
